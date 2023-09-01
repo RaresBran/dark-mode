@@ -53,7 +53,54 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "http://localhost:8080/api/cars",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 01 Sep 2023 09:02:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isDarkMode\": true,\n    \"cars\": [\n        {\n            \"name\": \"Toyota\",\n            \"model\": \"Camry\"\n        },\n        {\n            \"name\": \"Ford\",\n            \"model\": \"Mustang\"\n        },\n        {\n            \"name\": \"Volkswagen\",\n            \"model\": \"Passat\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "http://localhost:8080/api/dark-mode",
@@ -82,7 +129,67 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "http://localhost:8080/api/dark-mode",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/dark-mode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dark-mode"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Set-Cookie",
+							"value": "darkMode=true; Path=/"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 01 Sep 2023 09:02:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\": \"Dark Mode preference has been set.\"}"
+				}
+			]
 		}
 	]
 }
